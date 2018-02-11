@@ -7,9 +7,7 @@ public class PlayAd : MonoBehaviour {
 
     void Start()
     {
-        Advertisement.Initialize("1654618", true);
-
-        //StartCoroutine(ShowAdWhenReady());
+        Advertisement.Initialize("1700367", true);
     }
 
     IEnumerator ShowAdWhenReady()
