@@ -7,6 +7,7 @@ public class PlayAd : MonoBehaviour {
 
     void Start()
     {
+        
         Advertisement.Initialize("1700367", true);
     }
 
