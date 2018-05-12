@@ -14,9 +14,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ad-Retry.unity
     guid: ea62b869420fd2645883dd1144621a48
-  - enabled: 0
-    path: Assets/Scenes/Platform randomizor.unity
-    guid: 2d1efcd395d358944b806d5d74ea67e7
-  - enabled: 0
-    path: Assets/Scenes/Level1-hardMode.unity
-    guid: 90e69a617da7cec40a68397c4a07339e
