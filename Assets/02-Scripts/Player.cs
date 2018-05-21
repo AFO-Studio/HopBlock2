@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     public LayerMask groundIsWhere;
 
+    [SerializeField]
     bool onGround;
 
     // Use this for initialization
@@ -46,14 +47,14 @@ public class Player : MonoBehaviour
         {
             //Destroy(gameObject);
             gameObject.SetActive(false);
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("Ad-Retry");
         }
-        if (col.gameObject.tag == "Bricks")
-        {
-            //Destroy(gameObject);
-            gameObject.SetActive(false);
-            SceneManager.LoadScene(2);
-        }
+        //if (col.gameObject.tag == "Bricks")
+        //{
+        //    //Destroy(gameObject);
+        //    gameObject.SetActive(false);
+        //    SceneManager.LoadScene("Ad-Retry");
+        //}
     }
 
 }
