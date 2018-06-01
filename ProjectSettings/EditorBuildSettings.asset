@@ -6,11 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HopBlock_MainMenu.unity
+    path: Assets/03-Scenes/HopBlock_MainMenu.unity
     guid: 411c2c64a494ff04195d34af9943c053
   - enabled: 1
-    path: Assets/Scenes/TemplateLevel.unity
+    path: Assets/03-Scenes/TemplateLevel.unity
     guid: 59a0486b6456f9a4193d73bb01d2794e
   - enabled: 1
-    path: Assets/Scenes/Ad-Retry.unity
+    path: Assets/03-Scenes/Ad-Retry.unity
     guid: ea62b869420fd2645883dd1144621a48
+  - enabled: 1
+    path: Assets/03-Scenes/COinCollection.unity
+    guid: 3c50789dd2e7ade4ea5901cd66ecbb40
+  - enabled: 1
+    path: Assets/03-Scenes/Level1-hardMode.unity
+    guid: 90e69a617da7cec40a68397c4a07339e
+  - enabled: 1
+    path: Assets/03-Scenes/Platform randomizor.unity
+    guid: 2d1efcd395d358944b806d5d74ea67e7
+  m_configObjects: {}

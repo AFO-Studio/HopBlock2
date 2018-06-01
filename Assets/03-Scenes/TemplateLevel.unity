@@ -803,7 +803,7 @@ Prefab:
     - target: {fileID: 224347944841335202, guid: cd7cbf39b22f1fc47bb9060e64757ade,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -8.589485
+      value: -8.589478
       objectReference: {fileID: 0}
     - target: {fileID: 224347944841335202, guid: cd7cbf39b22f1fc47bb9060e64757ade,
         type: 2}
@@ -980,7 +980,7 @@ Prefab:
     - target: {fileID: 114520918556820942, guid: 515fe2d42acf21d47acf106d21f8059e,
         type: 2}
       propertyPath: groundCheckRadius
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 515fe2d42acf21d47acf106d21f8059e, type: 2}
