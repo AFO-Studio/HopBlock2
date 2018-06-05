@@ -528,8 +528,13 @@ MonoBehaviour:
   GroundTile: {fileID: 1294389984135948, guid: 8d369d41fd8ffda4fa3a8e68f20c26f9, type: 2}
   generationPoint: {fileID: 2060747574}
   distanceBetween: 2
+  heightBetween: 0
+  direction: 1
   distanceBetweenMin: 1
   distanceBetweenMax: 2.5
+  heightBetweenMin: 0
+  heightBetweenMax: 1
+  killBox: {fileID: 0}
   theObjectPool: {fileID: 227143871}
 --- !u!4 &470687680
 Transform:
