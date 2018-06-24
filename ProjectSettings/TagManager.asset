@@ -9,6 +9,8 @@ TagManager:
   - Brick
   - Eraser
   - coin
+  - SpawnPoint
+  - LevelAssembler
   layers:
   - Default
   - TransparentFX

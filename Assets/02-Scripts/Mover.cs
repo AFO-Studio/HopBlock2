@@ -22,6 +22,12 @@ public class Mover : MonoBehaviour {
         Moving(); //call to moving function
     }
 
+    //set object speed
+    public void SetSpeed(float speed)
+    {
+        objectSpeed = speed;
+    }
+
     public void Moving()
     {
         //if its positive, but we need it to go left this will handle that

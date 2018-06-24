@@ -9,7 +9,7 @@ public class User : MonoBehaviour {
 		player = gameObject.GetComponent<Rigidbody2D>();
     }
 	
-	private void FixedUpdate ()
+	private void Update ()
     {
         //receives input from the touch and checks if you're on the ground
         if (Input.GetKeyDown(KeyCode.Mouse0)) //needs secondary condition to make sure that the player in on the ground when we jump
