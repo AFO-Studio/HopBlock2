@@ -15,6 +15,8 @@ public class Mover : MonoBehaviour {
     private void Start()
     {
         obj = gameObject.GetComponent<Rigidbody2D>();
+       // if (direction == Direction.Right)
+           
     }
 
     private void FixedUpdate()

@@ -10,6 +10,7 @@ public class PrebuiltLevel : MonoBehaviour {
     public float rarity = 9;
     public List<GameObject> rareSelection;
     public float speed = 1f;
+    public bool rightToLeft;
 
     private List<GameObject> built = new List<GameObject>();
 
@@ -34,6 +35,10 @@ public class PrebuiltLevel : MonoBehaviour {
 
             built.Add(Instantiate(SelectPlatform(), NextSpawnPoint, Quaternion.identity));
             built[built.Count - 1].GetComponent<Mover>().SetSpeed(speed);
+            //built[built.Count - 1].GetComponent<PlayerDetector>().preBuiltLevel = gameObject.GetComponent<PrebuiltLevel>();
+            if (rightToLeft)    //Reverse direction for Right-to-left platforms
+                built[built.Count - 1].GetComponent<Mover>().direction = Mover.Direction.Right;
+
         }
 
         //if there are already platforms, build another one on the last childs spawnpoint. 
