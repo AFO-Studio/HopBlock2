@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerDetector : MonoBehaviour {
 
     GameObject levelAssembler;
-    PrebuiltLevel preBuiltLevel; 
+    public PrebuiltLevel preBuiltLevel; 
 
 
 	// Use this for initialization

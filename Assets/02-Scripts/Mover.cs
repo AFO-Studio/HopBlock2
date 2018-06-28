@@ -2,7 +2,7 @@
 
 public class Mover : MonoBehaviour {
     private Rigidbody2D obj;
-    public float objectSpeed = 1; //the speed at which the object goes
+    public float objectSpeed = 0.4f; //the speed at which the object goes
 
     public enum Direction //directional enumerator
     {
@@ -15,6 +15,13 @@ public class Mover : MonoBehaviour {
     private void Start()
     {
         obj = gameObject.GetComponent<Rigidbody2D>();
+       // if (direction == Direction.Right)
+           
+    }
+
+    private void Update()
+    {
+       //This is not the way to do it.  It must be static per player, not per platform. objectSpeed += objectSpeed * Time.deltaTime * 0.2f;    //Accelerate the platforms
     }
 
     private void FixedUpdate()
