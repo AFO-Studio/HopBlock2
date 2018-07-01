@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
-public class User : MonoBehaviour {
-    private Rigidbody2D player;
+public class User : MonoBehaviour
+{
+    /*private Rigidbody2D player;
     public float jumpHeight = 1; //basically the jump speed/height
 
 	public float limit = 0.3f;//How much the player can jump
@@ -32,4 +33,48 @@ public class User : MonoBehaviour {
 			if (toLimit  > 0)
 				toLimit -= Time.deltaTime;	//cooldown
 	}
+}*/
+
+    public float lowestVelocity = 4f;   //lowest possible jump velocity
+    public float highestVelocity = 8f;          //highest possible jump velocity
+
+    bool jump = false;
+    bool jumpCancel = false;
+    bool grounded = true;
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && grounded)   //start pressing the buttons
+            jump = true;
+        if (Input.GetMouseButtonUp(0) && !grounded)  //stop pressing the buttons
+            jumpCancel = true;
+    }
+
+    void FixedUpdate()
+    {
+        //normal jump 
+        if (jump)
+        {
+            grounded = false;
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, highestVelocity);
+            jump = false;
+        }
+        //cancels jump when key is no longer pressed
+        if (jumpCancel)
+        {
+            if (gameObject.GetComponent<Rigidbody2D>().velocity.y > lowestVelocity)
+                gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, lowestVelocity);
+            jumpCancel = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Ground")
+        {
+            grounded = true;
+        }
+    }
+
+    
 }
