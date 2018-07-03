@@ -48,6 +48,18 @@ public class User : MonoBehaviour
             jump = true;
         if (Input.GetMouseButtonUp(0) && !grounded)  //stop pressing the buttons
             jumpCancel = true;
+        if (Input.GetMouseButtonDown(0) && !grounded )  //speeds you downwards
+        {
+            if(gameObject.GetComponent<Rigidbody2D>().velocity.y > 0)
+            {
+                gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, (gameObject.GetComponent<Rigidbody2D>().velocity.y + 2.0f) * -1f);
+            }
+            else
+            {
+                gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, gameObject.GetComponent<Rigidbody2D>().velocity.y - 2f);
+            }
+        }
+
     }
 
     void FixedUpdate()
@@ -66,9 +78,13 @@ public class User : MonoBehaviour
                 gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, lowestVelocity);
             jumpCancel = false;
         }
+
+
+
+
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnCollisionenter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground")
         {
@@ -76,5 +92,4 @@ public class User : MonoBehaviour
         }
     }
 
-    
 }
