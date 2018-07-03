@@ -18,6 +18,7 @@ public class PrebuiltLevel : MonoBehaviour {
 	void Start ()
     {
         Build();
+        SpeedAdjuster(12);
 	}
 	
 
@@ -60,6 +61,15 @@ public class PrebuiltLevel : MonoBehaviour {
         {
             return selection[Random.Range(0, selection.Count)];
         }
+    }
+
+    public void SpeedAdjuster(float speed)
+    {
+        foreach(GameObject platformGroup in built)
+        {
+            platformGroup.GetComponent<Mover>().SetSpeed(speed);
+        }
+        this.speed = speed;
     }
 
 }
