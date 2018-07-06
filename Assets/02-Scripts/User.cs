@@ -48,7 +48,7 @@ public class User : MonoBehaviour
             jump = true;
         if (Input.GetMouseButtonUp(0) && !grounded)  //stop pressing the buttons
             jumpCancel = true;
-        if (Input.GetMouseButtonDown(0) && !grounded )  //speeds you downwards
+        /*if (Input.GetMouseButtonDown(0) && !grounded )  //speeds you downwards
         {
             if(gameObject.GetComponent<Rigidbody2D>().velocity.y > 0)
             {
@@ -58,7 +58,7 @@ public class User : MonoBehaviour
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, gameObject.GetComponent<Rigidbody2D>().velocity.y - 2f);
             }
-        }
+        }*/
 
     }
 
@@ -84,7 +84,7 @@ public class User : MonoBehaviour
 
     }
 
-    void OnCollisionenter2D(Collision2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground")
         {

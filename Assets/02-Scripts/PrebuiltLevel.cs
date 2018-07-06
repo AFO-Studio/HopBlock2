@@ -18,7 +18,7 @@ public class PrebuiltLevel : MonoBehaviour {
 	void Start ()
     {
         Build();
-        SpeedAdjuster(12);
+        SpeedAdjuster(4);
 	}
 	
 
