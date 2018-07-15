@@ -698,6 +698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6970f1516355e447b4dc86147073c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelAssembler: {fileID: 0}
+  preBuiltLevel: {fileID: 0}
 --- !u!114 &114490312387754228
 MonoBehaviour:
   m_ObjectHideFlags: 1

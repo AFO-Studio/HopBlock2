@@ -284,7 +284,6 @@ MonoBehaviour:
   rareSelection:
   - {fileID: 0}
   speed: 5
-  rightToLeft: 0
 --- !u!4 &317680929
 Transform:
   m_ObjectHideFlags: 0

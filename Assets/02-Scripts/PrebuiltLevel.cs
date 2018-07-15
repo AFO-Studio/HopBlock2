@@ -10,7 +10,7 @@ public class PrebuiltLevel : MonoBehaviour {
     public float rarity = 9;
     public List<GameObject> rareSelection;
     public float speed = 1f;
-    public bool rightToLeft;
+    //public bool leftToRight;
 
     private List<GameObject> built = new List<GameObject>();
 
@@ -31,14 +31,17 @@ public class PrebuiltLevel : MonoBehaviour {
  
             built.Add(Instantiate(SelectPlatform(), transform.position, Quaternion.identity));
             built[built.Count - 1].GetComponent<Mover>().SetSpeed(speed);
+            built[built.Count - 1].transform.Find("SpawnNext").GetComponent<PlayerDetector>().levelAssembler = this.gameObject;
 
             NextSpawnPoint = built[built.Count - 1].transform.Find("SpawnPoint").transform.position;
 
             built.Add(Instantiate(SelectPlatform(), NextSpawnPoint, Quaternion.identity));
             built[built.Count - 1].GetComponent<Mover>().SetSpeed(speed);
+            built[built.Count - 1].transform.Find("SpawnNext").GetComponent<PlayerDetector>().levelAssembler = this.gameObject;
             //built[built.Count - 1].GetComponent<PlayerDetector>().preBuiltLevel = gameObject.GetComponent<PrebuiltLevel>();
-            if (rightToLeft)    //Reverse direction for Right-to-left platforms
-                built[built.Count - 1].GetComponent<Mover>().direction = Mover.Direction.Right;
+
+
+            built[built.Count - 1].transform.Find("SpawnNext").GetComponent<PlayerDetector>().levelAssembler = this.gameObject;
 
         }
 
@@ -48,6 +51,7 @@ public class PrebuiltLevel : MonoBehaviour {
             NextSpawnPoint = built[built.Count - 1].transform.Find("SpawnPoint").transform.position;
             built.Add(Instantiate(SelectPlatform(), NextSpawnPoint, Quaternion.identity));
             built[built.Count - 1].GetComponent<Mover>().SetSpeed(speed);
+            built[built.Count - 1].transform.Find("SpawnNext").GetComponent<PlayerDetector>().levelAssembler = this.gameObject;
         }
     }
 

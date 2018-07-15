@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerDetector : MonoBehaviour {
 
-    GameObject levelAssembler;
+    public GameObject levelAssembler;
     public PrebuiltLevel preBuiltLevel; 
 
 
 	// Use this for initialization
 	void Start ()
     {
-        levelAssembler = GameObject.FindGameObjectWithTag("LevelAssembler");
+        //levelAssembler = GameObject.FindGameObjectWithTag("LevelAssembler");
         preBuiltLevel = levelAssembler.GetComponent<PrebuiltLevel>();
 	}
 	

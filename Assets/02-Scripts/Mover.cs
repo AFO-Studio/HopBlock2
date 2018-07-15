@@ -38,17 +38,17 @@ public class Mover : MonoBehaviour {
     public void Moving()
     {
         //if its positive, but we need it to go left this will handle that
-        if (direction == Direction.Left)
+        if (direction == Direction.Right)
         {
-            if (objectSpeed > 0)
+            if (objectSpeed < 0)
             {
                 objectSpeed = objectSpeed * -1;
             }
         }
         //if its negative, but we need it to go right this will handle that
-        else if (direction == Direction.Right)
+        else if (direction == Direction.Left)
         {
-            if (objectSpeed < 0)
+            if (objectSpeed > 0)
             {
                 objectSpeed = objectSpeed * -1;
             }
