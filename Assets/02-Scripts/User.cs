@@ -2,6 +2,12 @@
 
 public class User : MonoBehaviour
 {
+    private void Start()
+    {
+        Matrix4x4 mat = Camera.main.projectionMatrix;
+        mat *= Matrix4x4.Scale(new Vector3(-1, -1, 1));
+        Camera.main.projectionMatrix = mat;
+    }
     /*private Rigidbody2D player;
     public float jumpHeight = 1; //basically the jump speed/height
 
