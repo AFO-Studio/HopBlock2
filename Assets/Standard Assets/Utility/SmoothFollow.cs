@@ -57,5 +57,11 @@ namespace UnityStandardAssets.Utility
 			// Always look at the target
 			transform.LookAt(target);
 		}
-	}
+
+        public void heightAdjuster(float height)
+        {
+            transform.position = new Vector3(transform.position.x, height - 5.8f, transform.position.z);
+        }
+    }
+
 }
