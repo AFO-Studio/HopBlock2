@@ -4,11 +4,9 @@ public class Lifetime : MonoBehaviour {
 
     public int time = 15;
 
-	private void Start ()
+    private void Start()
     {
-        //destroys object after it's off screen
+        //Destroys after a set time. 
         Destroy(gameObject, time);
-
-	}
-
+    }
 }
