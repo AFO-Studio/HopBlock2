@@ -10,6 +10,9 @@ public class PrebuiltLevel : MonoBehaviour {
     public float rarity = 9;
     public List<GameObject> rareSelection;
     public float speed = 1f;
+    bool buildDelay = true;
+    public int time = 3;
+
     //public bool leftToRight;
 
     private List<GameObject> built = new List<GameObject>();
@@ -17,10 +20,24 @@ public class PrebuiltLevel : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        Build();
+        if(buildDelay)
+        {
+            StartCoroutine("DelayedBuild");
+        }
+        else
+        {
+            Build();
+        }
+
         SpeedAdjuster(4);
 	}
 	
+
+    IEnumerator DelayedBuild()
+    {
+        yield return new WaitForSeconds(time);
+        Build();
+    }
 
     public void Build()
     {

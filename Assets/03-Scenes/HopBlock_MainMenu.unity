@@ -558,8 +558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b342acdb701dad642bb637f443a02b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainJingle: {fileID: 8300000, guid: 296fa3c7f7bbb85418b575228fea726f, type: 3}
-  hover: {fileID: 8300000, guid: 76996056572f2654888b1766ccd92734, type: 3}
+  MainJingle: {fileID: 8300000, guid: c1c98f257f929d64280f2e2ddc0a704e, type: 3}
+  hover: {fileID: 8300000, guid: e6d0559463e233a40a2148390e45858c, type: 3}
   UInoiseMaker: {fileID: 2091961242}
 --- !u!1 &2091961241
 GameObject:
