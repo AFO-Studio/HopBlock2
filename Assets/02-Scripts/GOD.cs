@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GOD : MonoBehaviour {
@@ -10,6 +11,7 @@ public class GOD : MonoBehaviour {
     public GameObject player1;
     public GameObject player2;
     public int score = 0;
+    public Text scoreText;
 
     private MusicManager musicManager;
 
@@ -62,6 +64,7 @@ public class GOD : MonoBehaviour {
         while(true)
         {
             score++;
+            scoreText.text = "Score: " + score.ToString();
             yield return new WaitForSeconds(1);
         }
     }

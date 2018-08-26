@@ -30,7 +30,7 @@ public class Sound
         source.clip = clip;
     }
 
-
+    //allows looping
     public void Play(bool _loop)
     {
         source.volume = volume * (1+ Random.Range(-randomVolume/2f, randomVolume/2f));
@@ -39,7 +39,6 @@ public class Sound
         source.Play();
     }
 
-    //allows looping
     public void Play()
     {
         source.volume = volume * (1 + Random.Range(-randomVolume / 2f, randomVolume / 2f));
@@ -49,7 +48,7 @@ public class Sound
     }
 }
 
-//[System.Serializable]
+
 public class MusicManager : MonoBehaviour
 {
 

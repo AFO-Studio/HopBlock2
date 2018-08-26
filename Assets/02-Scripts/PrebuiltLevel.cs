@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PrebuiltLevel : MonoBehaviour {
 
+    public GameObject player;
     public List<GameObject> selection;
     public bool useRareSelection = true;
     [Range(1,10)]
@@ -33,6 +34,7 @@ public class PrebuiltLevel : MonoBehaviour {
 	}
 	
 
+    //If you add a build delay, this handles that.
     IEnumerator DelayedBuild()
     {
         yield return new WaitForSeconds(time);
@@ -69,6 +71,7 @@ public class PrebuiltLevel : MonoBehaviour {
             built.Add(Instantiate(SelectPlatform(), NextSpawnPoint, Quaternion.identity));
             built[built.Count - 1].GetComponent<Mover>().SetSpeed(speed);
             built[built.Count - 1].transform.Find("SpawnNext").GetComponent<PlayerDetector>().levelAssembler = this.gameObject;
+            player.GetComponent<Death>().SetKillPosition(built[built.Count - 1].transform.position.y - 50);
         }
     }
 
@@ -84,6 +87,8 @@ public class PrebuiltLevel : MonoBehaviour {
         }
     }
 
+
+    //loops through all platforms and adjusts speed as well as future platform speed.
     public void SpeedAdjuster(float speed)
     {
         foreach(GameObject platformGroup in built)
